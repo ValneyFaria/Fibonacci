@@ -1,13 +1,14 @@
 package fibo;
 
+import java.util.Scanner;
+
 public class Fibonacci {
 
 	static long fiboIterativo(int n) {
-		int F = 0; // atual
-		int ant = 0; // anterior
+		int F = 0; // Atual
+		int ant = 0; // Anterior
 
 		for (int i = 1; i <= n; i++) {
-
 			if (i == 1) {
 				F = 1;
 				ant = 0;
@@ -15,9 +16,7 @@ public class Fibonacci {
 				F += ant;
 				ant = F - ant;
 			}
-
 		}
-
 		return F;
 	}
 
@@ -30,17 +29,23 @@ public class Fibonacci {
 	}
 
 	public static void main(String[] args) {
+		int valor;
+		Scanner le = new Scanner(System.in);
 
-		// teste do programa. Imprime os 30 primeiros termos
-		System.out.println("RECURSIVO:");
-		for (int i = 0; i < 30; i++) {
-			System.out.println("[" + i + "]:" + Fibonacci.fiboRecursivo(i));
-		}
+		System.out.println("Insira o tanto de termos desejados:");
+		valor = le.nextInt();
 
-		// teste do programa. Imprime os 30 primeiros termos
+		// Imprime os 30 primeiros termos de forma iterativa
 		System.out.println("\nITERATIVO:");
-		for (int i = 0; i < 30; i++) {
-			System.out.println("[" + i + "]:" + Fibonacci.fiboIterativo(i));
+		for (int i = 0; i < valor; i++) {
+			System.out.printf("[%d]: %d\n", i + 1, Fibonacci.fiboIterativo(i));
 		}
+
+		// Imprime os 30 primeiros termos de forma recursiva
+		System.out.println("RECURSIVO:");
+		for (int i = 0; i < valor; i++) {
+			System.out.printf("[%d]: %d\n", i + 1, Fibonacci.fiboRecursivo(i));
+		}
+		le.close();
 	}
 }
