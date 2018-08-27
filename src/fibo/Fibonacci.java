@@ -34,13 +34,13 @@ public class Fibonacci {
 		// teste do programa. Imprime os 30 primeiros termos
 		System.out.println("RECURSIVO:");
 		for (int i = 0; i < 30; i++) {
-			System.out.println("(" + i + "):" + Fibonacci.fiboRecursivo(i));
+			System.out.println("[" + i + "]:" + Fibonacci.fiboRecursivo(i));
 		}
 
 		// teste do programa. Imprime os 30 primeiros termos
 		System.out.println("\nITERATIVO:");
 		for (int i = 0; i < 30; i++) {
-			System.out.println("(" + i + "):" + Fibonacci.fiboIterativo(i));
+			System.out.println("[" + i + "]:" + Fibonacci.fiboIterativo(i));
 		}
 	}
 }
