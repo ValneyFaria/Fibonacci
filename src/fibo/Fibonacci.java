@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Fibonacci {
 
 	static long fiboIterativo(int n) {
-		int F = 0; // Atual
-		int ant = 0; // Anterior
+		long F = 0; // Atual
+		long ant = 0; // Anterior
 
 		for (int i = 1; i <= n; i++) {
 			if (i == 1) {
